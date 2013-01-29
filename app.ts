@@ -1,15 +1,17 @@
+/// <reference path="definitions/express.d.ts" />
+/// <reference path="definitions/node.d.ts" />
 
 /**
  * Module dependencies.
  */
 
-var express = require('express')
-  , routes = require('./routes')
-  , user = require('./routes/user')
-  , http = require('http')
-  , path = require('path');
+import express = module('express');
+import routes = module("./routes/index");
+import user = module('./routes/user');
+import http = module('http');
+import path = module('path');
 
-var app = express();
+var app = express.createServer();
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);

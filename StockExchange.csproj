@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -38,19 +39,36 @@
     <None Include="views\layout.jade" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="app.ts" />
+    <TypeScriptCompile Include="app.ts" />
+    <Content Include="app.js">
+      <DependentUpon>app.ts</DependentUpon>
+    </Content>
+    <Content Include="app.min.js">
+      <DependentUpon>app.ts</DependentUpon>
+    </Content>
+    <Content Include="definitions\express.d.ts" />
+    <Content Include="definitions\node.d.ts" />
     <Content Include="public\stylesheets\style.css" />
-    <Content Include="routes\index.js" />
-    <Content Include="routes\user.js" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="config.gitignore" />
+    <Content Include="routes\index.js">
+      <DependentUpon>index.ts</DependentUpon>
+    </Content>
+    <Content Include="routes\index.min.js">
+      <DependentUpon>index.ts</DependentUpon>
+    </Content>
+    <Content Include="routes\index.ts" />
+    <Content Include="routes\user.js">
+      <DependentUpon>user.ts</DependentUpon>
+    </Content>
+    <Content Include="routes\user.min.js">
+      <DependentUpon>user.ts</DependentUpon>
+    </Content>
+    <Content Include="routes\user.ts" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  --><!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
