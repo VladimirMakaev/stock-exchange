@@ -39,9 +39,6 @@
     <TypeScriptSourceMap>false</TypeScriptSourceMap>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="app.js.map">
-      <DependentUpon>app.ts</DependentUpon>
-    </None>
     <None Include="package.json" />
     <None Include="README.md" />
     <None Include="routes\index.js.map">
