@@ -1,5 +1,9 @@
-var express = require('express'), routes = require('./routes'), user = require('./routes/user'), http = require('http'), path = require('path');
-var app = express();
+var express = require('express')
+var routes = require("./routes/index")
+var user = require('./routes/user')
+var http = require('http')
+var path = require('path')
+var app = express.createServer();
 app.configure(function () {
     app.set('port', process.env.PORT || 3000);
     app.set('views', __dirname + '/views');

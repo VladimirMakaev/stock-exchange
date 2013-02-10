@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{53117595-BD6F-489B-BCA8-6960B4EEDF64}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>StockExchange</RootNamespace>
     <AssemblyName>StockExchange</AssemblyName>
@@ -65,10 +65,10 @@
     <Content Include="routes\user.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Folder Include="tests\" />
   </ItemGroup>
-  <!--<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  --><!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
