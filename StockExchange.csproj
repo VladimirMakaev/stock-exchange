@@ -11,6 +11,9 @@
     <AssemblyName>StockExchange</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptIncludeComments>true</TypeScriptIncludeComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,10 +34,22 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <TypeScriptTarget>ES5</TypeScriptTarget>
+    <TypeScriptIncludeComments>false</TypeScriptIncludeComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
   </PropertyGroup>
   <ItemGroup>
+    <None Include="app.js.map">
+      <DependentUpon>app.ts</DependentUpon>
+    </None>
     <None Include="package.json" />
     <None Include="README.md" />
+    <None Include="routes\index.js.map">
+      <DependentUpon>index.ts</DependentUpon>
+    </None>
+    <None Include="routes\user.js.map">
+      <DependentUpon>user.ts</DependentUpon>
+    </None>
     <None Include="views\index.jade" />
     <None Include="views\layout.jade" />
   </ItemGroup>
@@ -43,31 +58,23 @@
     <Content Include="app.js">
       <DependentUpon>app.ts</DependentUpon>
     </Content>
-    <Content Include="app.min.js">
-      <DependentUpon>app.ts</DependentUpon>
-    </Content>
     <Content Include="definitions\express.d.ts" />
     <Content Include="definitions\node.d.ts" />
     <Content Include="public\stylesheets\style.css" />
     <Content Include="routes\index.js">
       <DependentUpon>index.ts</DependentUpon>
     </Content>
-    <Content Include="routes\index.min.js">
-      <DependentUpon>index.ts</DependentUpon>
-    </Content>
-    <Content Include="routes\index.ts" />
+    <TypeScriptCompile Include="routes\index.ts" />
     <Content Include="routes\user.js">
       <DependentUpon>user.ts</DependentUpon>
     </Content>
-    <Content Include="routes\user.min.js">
-      <DependentUpon>user.ts</DependentUpon>
-    </Content>
-    <Content Include="routes\user.ts" />
+    <TypeScriptCompile Include="routes\user.ts" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="tests\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

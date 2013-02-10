@@ -1,3 +1,8 @@
+/// <reference path="definitions/node.d.ts" />
+/// <reference path="definitions/express.d.ts" />
+/**
+* Module dependencies.
+*/
 var express = require("express")
 var routes = require("./routes/index")
 var user = require('./routes/user')
