@@ -1,5 +1,0 @@
-C:\Work\GitHubRepos\stock-exchange\obj\Debug\StockExchange.csprojResolveAssemblyReference.cache
-C:\Work\GitHubRepos\stock-exchange\bin\Debug\StockExchange.dll
-C:\Work\GitHubRepos\stock-exchange\bin\Debug\StockExchange.pdb
-C:\Work\GitHubRepos\stock-exchange\obj\Debug\StockExchange.dll
-C:\Work\GitHubRepos\stock-exchange\obj\Debug\StockExchange.pdb
