@@ -12,7 +12,7 @@ declare module "express" {
    export function methodOverride(): (req: ExpressServerRequest, res: ExpressServerResponse, next) =>void;
    export function favicon(opotions?: any): (req: ExpressServerRequest, res: ExpressServerResponse, next) => void;
    export function logger(name: string): (req: ExpressServerRequest, res: ExpressServerResponse, next) => void;
-
+   export function session(options?: any) : (req: ExpressServerRequest, res: ExpressServerResponse, next?: any) => void;
    export interface ExpressSettings {
        env?: string;
        views?: string;

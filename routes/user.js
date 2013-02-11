@@ -1,6 +1,3 @@
-/*
-* GET users listing.
-*/
 function list(req, res) {
     res.send("respond with a resource");
 }
